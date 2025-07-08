@@ -99,6 +99,10 @@ app.get('/protected', (req, res) => {
 });
 
 console.log('TEST');
+console.log('TEST');
+console.log('TEST');
+console.log('TEST');
+
 
 app.listen(3000, () => {
   console.log('✅ Server running at http://localhost:3000');
