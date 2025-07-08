@@ -74,7 +74,7 @@ app.post('/login', async (req, res) => {
     const passwordMatch = await bcrypt.compare(password, user.password);
 
     if (!passwordMatch) {
-      return res.status(401).json({ message: 'Invalid password' });
+      return res.status(401).json({ message: 'Invalid ' });
     }
 
     const token = jwt.sign(
@@ -97,6 +97,8 @@ app.get('/protected', (req, res) => {
     user: req.user
   });
 });
+
+console.log('TEST');
 
 app.listen(3000, () => {
   console.log('✅ Server running at http://localhost:3000');
